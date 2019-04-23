@@ -1,0 +1,501 @@
+/*set config footer down in viewport*/
+
+main {
+    display: block;
+    min-height: 100vh;
+    min-height: -webkit-calc(100vh - 100px);
+    min-height: -moz-calc(100vh - 100px);
+    min-height: calc(100vh - 100px);
+    position: relative;
+    width: 100%;
+}
+.separator {
+    width: 100%;
+    height: 5px;
+    background: #595959;
+    position: relative;
+   
+}
+/*set config logo and text in header.php*/
+.dt-hj {
+    width: 50%;
+    height: auto;
+    margin: 20vh -65vw 0 0;
+    background: transparent;
+    color: teal;
+}
+.logo {
+    height: 28vh;
+    position: fixed;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    z-index: 2000;
+    background: #eee;
+}
+
+.img-logo img {
+    padding: 10px 0 10px 0;
+    max-width: 50%;
+    height: auto;   
+
+}
+.text-logo {
+    position: absolute;
+    color: #00A1C1;
+    transform: translate(135%,10%);
+    
+}
+
+.text-logo p {
+    text-align: right;
+    font-style: italic;
+}
+
+/*set config Menu*/
+
+.menu {
+    position: absolute;
+    transform: translate(180%,5%);
+}
+
+.block-menu {
+    display: block;
+    background: #eee;
+    text-align: center;
+
+}
+
+.block-menu li {
+    display: inline-block;
+}
+
+.block-menu li a {
+    padding: 15px 10px;
+    color: white;
+    display: block;
+    text-decoration: none;
+    font-family: sans-serif;
+    text-transform: uppercase;
+    line-height: 20px;
+    font-size: 18px;
+    overflow: visible;
+}
+
+.three-d {
+    perspective: 200px;
+    transition: all .7s linear;
+    position: relative;
+    cursor: pointer;
+}
+
+.three-d:hover .three-d-box,
+.three-d:focus .three-d-box {
+    transform: translateZ(-25px) rotateX(90deg);
+
+}
+
+.three-d-box {
+    transition: all .3s ease-out;
+    transform: translateZ(-22px);
+    transform-style: preserve-3d;
+    pointer-events: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.front {
+    transform: rotateX(0deg) translateZ(25px);
+    background: #eee;
+    color: #0099ea;
+    font-weight: 100;
+}
+
+.back {
+    transform: rotateX(-90deg) translateZ(25px);
+    background: #eee;
+    font-weight: 100;
+    color: orange;
+}
+
+.front,
+.back {
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 15px 10px;
+    pointer-events: none;
+    box-sizing: border-box;
+}
+
+/*set conf pagin index.php*/
+
+.slideshow {
+    margin: 0 auto;
+    padding-top: 50px;
+    height: 600px;
+    background: radial-gradient(teal,#000);
+    box-sizing: border-box;
+    position: relative;
+    
+}
+
+.content {
+    margin: auto;
+    width: 290px;
+    perspective: 1000px;
+    position: relative;
+    padding-top: 80px;
+}
+.content-carrousel {
+    width: 100%;
+    position: absolute;
+    float: right;
+    animation: rodar 40s infinite linear;
+    transform-style: preserve-3d;
+	
+}
+.content-carrousel:hover {
+	animation-play-state: paused;
+    cursor: pointer;
+    
+}
+.content-carrousel figure {
+	width: 100%;
+    height: 220px;
+    border: 1px solid #4d444d;
+    overflow: hidden;
+    position: absolute;
+}
+.content-carrousel figure:nth-child(1){
+    transform: rotateY(0deg) translateZ(420px);
+}
+.content-carrousel figure:nth-child(2){
+    transform: rotateY(40deg) translateZ(420px);
+}
+.content-carrousel figure:nth-child(3){
+    transform: rotateY(80deg) translateZ(420px);
+}
+.content-carrousel figure:nth-child(4){
+    transform: rotateY(120deg) translateZ(420px);
+}
+.content-carrousel figure:nth-child(5){
+    transform: rotateY(160deg) translateZ(420px);
+}
+.content-carrousel figure:nth-child(6){
+    transform: rotateY(200deg) translateZ(420px);
+}
+.content-carrousel figure:nth-child(7){
+    transform: rotateY(240deg) translateZ(420px);
+}
+.content-carrousel figure:nth-child(8){
+    transform: rotateY(280deg) translateZ(420px);
+}
+.content-carrousel figure:nth-child(9){
+    transform: rotateY(320deg) translateZ(420px);
+}
+.shadow {
+    position: absolute;
+    box-shadow: 0px 0px 20px 0px #000;
+    border-radius: 2px;
+}
+.content-carrousel img {
+    image-rendering:auto;
+    transition: all 0.3s;
+    width: 100%;
+    height: 100%;
+    	
+}
+.content-carrousel img:hover {
+	transform: scale(1.2);
+    transition: all 0.3s;
+}
+@keyframes rodar {
+    from {
+        transform: rotateY(0deg);
+        
+    } to{
+        transform: rotateY(360deg);
+    }
+}
+.index-dica {
+    margin: 10vh 0 10vh 0;
+    color: #0099ea;
+    text-align: justify;
+}
+.index-dica p {
+    font-size: 15.5px !important;
+}
+.index-quatree {
+    margin: 10vh 0 0 10vh;
+    text-align: center;
+    color: teal;
+}
+.index-quatree img {
+    width: 98%;
+}
+
+
+
+/*set config page servicos.php*/
+.form-image {
+    width: 100%;
+    height: 600px;
+    margin-top: 35vh;
+    background-image: url(../img/caes.jpg);
+    background-size: 120%;
+    position: relative; 
+     -webkit-animation-name: movimento;
+     -webkit-animation-duration: 30s;
+     -webkit-animation-timing-function: linear;
+     -webkit-animation-iteration-count: infinite;
+     -webkit-animation-direction: alternate;
+}
+
+.text-form {
+    color: teal;
+    text-align: center;
+    margin: 5vh 0 0 0;
+   
+}
+.text-form p {
+    text-align: justify;
+    color: teal;
+    
+}
+.form {
+    color: teal;
+    margin: 5vh 0 0 5vh;
+}
+.label {
+    font-size: 16px !important;
+    color: teal !important;
+}
+
+/*Set config page q-somos.php*/
+.somos-img {
+    position: relative;
+    margin-top: 50vh;
+    
+    
+}
+.somos-img img {
+    width: 100%;
+   
+    
+}
+.somos-box {
+    width: 560px;
+    height: 560px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background: transparent;
+    border: 10px solid transparent;
+    padding: 10px;
+    box-sizing: border-box;
+    transition: .5s;
+    box-shadow: none;
+    color: red;
+}
+.shape {
+    background: transparent;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    transform: rotate(45deg) scale(1.2);
+    border: 10px solid #00f5a7;
+    border-radius: 50%;
+    transition: .5s;
+    box-shadow: 0 0 15px rgba(0,0,0,.5);
+    cursor: pointer;
+}
+.shape p {
+    margin: 0;   
+    padding: 35px;
+    text-align: justify;
+    box-sizing: border-box;
+    transform: rotate(-45deg) translate(-70px, 70px);
+    font-size: 12.5px;
+    display: none;
+    
+}
+.somos-box::before {
+    content: '';
+    position: absolute;
+    width: 24px;
+    height:104%;
+    background: #00ad76;
+    left: 50px;
+    top: -2%;
+    transition: .5s;
+    opacity: 0;
+    animation-delay: .3s;
+    z-index: -1;
+}
+.somos-box::after {
+    content: '';
+    position: absolute;
+    width: 24px;
+    height:104%;
+    background: #00ad76;
+    right: 50px;
+    top: -2%;
+    transition: .5s;
+    opacity: 0;
+    animation-delay: .3s;
+    z-index: -1;
+}
+.somos-box:hover::before {
+    left: -70px;
+    opacity: 1;
+}
+.somos-box:hover::after {
+    right: -70px;
+    opacity: 1;
+}
+.somos-box:hover .shape {
+    border-radius: 0;
+    
+}
+.somos-box:hover .shape p{
+    display: inherit;
+    
+    
+}
+.somos-box:hover {
+    background: #fff;
+    border: 10px solid #18d498;
+    color: teal;
+    box-shadow: 0 0 15px rgba(0,0,0,.5);
+}
+/* Set config. action.php*/
+.php-form {
+    width: 100%;
+    height: 460px;
+    margin-top: 30vh;
+    background-image: url(../img/tiere.jpg);
+    background-size: 200%;
+    position: relative;
+     -webkit-animation-name: movimento;
+     -webkit-animation-duration: 30s;
+     -webkit-animation-timing-function: linear;
+     -webkit-animation-iteration-count: infinite;
+     -webkit-animation-direction: alternate;
+    
+}
+ @-webkit-keyframes movimento {
+     from {
+         background-position: top left;
+     }
+     to {
+         background-position: bottom right;
+     }
+ }
+.capa-gradient {
+     width: 100%;
+     height: 100%;
+     position: absolute;
+     background: -webkit-linear-gradient(left, black, #0672d0);
+     opacity: 0.5;
+ }
+
+ .details {
+     margin: auto;
+     width: 100%;
+     max-width: 1200px;
+     position: relative;
+ }
+
+ .deta {
+     width: 100%;     
+     position: relative;
+     top: 20px;
+     padding: 1%;
+     color: white;
+     text-align: justify;
+     z-index: 1;
+ }
+
+ .deta h5 {
+     font-weight: 100;
+     
+ }
+
+/* Set config. footer.php*/
+.down {
+    width: 100%;
+    height: 50vh;
+    background: #eeeeee;    
+    display: flex;
+    flex-direction: row;
+    
+}
+.img-footer{    
+    margin: 30px 0 0 30px;
+}
+.img-footer img {
+    width: 125%;
+}
+
+.end-footer {
+    margin: 10vh 0 0 10vw;
+    display: flex;
+    flex-direction: row;
+}
+.box-footer {
+    position: relative;
+    width: 260px;
+    height: 80px;
+    box-sizing: border-box;
+    text-align: center;
+    color: #00A1C1;
+    background:  #efefef;
+    margin: 0 10px;
+    overflow: hidden;
+    border-radius: 4px;
+    box-shadow: 0 0 0 2px rgba(0,7,10,.6);
+    cursor: pointer;
+}
+.box-footer .icon {
+    width: 100%;
+    height: 100%;
+    background: #4d444d;
+    transition: 0.5s;
+}
+.box-footer .icon .fas {
+    font-size: 2em;
+    line-height: 80px;
+    color: orange;
+}
+.box-footer:hover .icon {
+    transform: scale(0);
+    
+}
+.box-footer .details h5 {
+    margin-top: 25px;
+    
+}
+.box-footer .details {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: 0.5s;
+    transform: scale(2);
+    opacity: 0;
+}
+.box-footer:hover .details {
+    transform: scale(1);
+    opacity: 1;
+}
